@@ -1,9 +1,11 @@
-const React = require('react')
+const React = require('react');
+const DefaultLayout = require('./layout/DefaultLayout');
 
 class Show extends React.Component{
     render(){
         const product = this.props.product
         return(
+            <DefaultLayout>
     <div>
       <h1> Show Page </h1>
           <p>{product.img}</p>
@@ -14,7 +16,7 @@ class Show extends React.Component{
       
       <button><a href={'/products'}> Back </a> </button>
       </div>
-        
+        </DefaultLayout>
         );
     }
 }
