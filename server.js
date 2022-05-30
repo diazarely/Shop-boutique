@@ -1,7 +1,17 @@
+require('dotenv').config()
 const express = require("express")
+const mongoose = require('mongoose')
 const app = express()
 const PORT = 3000
-const products = require('./models/products.js')
+const Product = require('./models/Product.js')
+
+//Connection to database
+    mongoose.connect(process.env.MONGO_URI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    })
+    mongoose.connection.once('open', () => console.log('Connected to Mongo'))
+    
 
 //Setup Engine
 app.set('view engine', 'jsx')
@@ -26,9 +36,12 @@ app.get('/products/:id',function(req, res){
 
 //create route
 app.post('/products', (req, res) => {
-    products.push(req.body);
-    console.log('req.body', req.body);
-   res.redirect('/products')
+    //products.push(req.body);
+   // console.log('req.body', req.body);
+   Product.create(req.body, (err, createdProduct)=> {
+       res.send(createdFruit)
+   })
+   //res.redirect('/products')
 });
 
 app.listen(PORT, () => console.log(`Listening to port ${PORT}`))
