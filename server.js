@@ -61,6 +61,31 @@ app.post('/products', (req, res) => {
     })
 });
 
+//update
+app.put('/products/:id', (req, res) => {
+   
+    Product.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedProduct) => {
+        if (!err) {
+            res.status(200).redirect('/products')
+        } else {
+            res.status(400).json(err)
+        }
+    })
+})
+
+//edit
+app.get('/products/:id/edit', (req,res)=>{
+    Product.findById(req.params.id, (err, foundProduct)=>{
+
+        if(!err){
+            res.render('Edit', {product: foundProduct})
+        }else{
+            res.status(400).json(err)
+        }
+    })
+
+})
+
 // Show route 
 app.get('/products/:id',(req, res)=>{
     Product.findById(req.params.id, (err, foundProduct) =>{
