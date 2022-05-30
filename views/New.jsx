@@ -5,7 +5,7 @@ class New extends React.Component {
   render() {
     return(
         <DefaultLayout title ="New Product page">
-
+            <h1> Add a New Product </h1>
                <form action="/products" method="POST">
                 img: <input type ="text" name="img"/> 
                  name: <input type="text" name="name" /><br/>
