@@ -22,6 +22,7 @@ app.engine('jsx', require('express-react-views').createEngine())
 //middleware
 app.use(method('_method'))
 app.use(express.urlencoded({extended:false}));
+app.use(express.static('public'))
 app.use(express.json())
 
 //Routes

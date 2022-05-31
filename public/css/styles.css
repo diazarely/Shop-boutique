@@ -1,0 +1,14 @@
+body {
+    
+  
+}
+
+.header{
+    background-color: cornflowerblue; 
+    background-image: url(https://cdn.dribbble.com/users/2272835/screenshots/7589377/stork_dribbble.gif);
+    height: 250px; 
+    width: 100%;
+   text-align: center;
+   font-size: 90px;
+}
+

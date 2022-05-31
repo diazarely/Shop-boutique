@@ -4,11 +4,14 @@ const DefaultLayout = require('./layout/DefaultLayout');
 class Show extends React.Component{
     render(){
         const product = this.props.product
+        //let productQty = product.qty === 0 ? "OUT OF STOCK" : product.qty
+         
         return(
             <DefaultLayout>
-    <div>
+    <div >
+        <div class="header"></div>
       <h1> Show Page </h1>
-          <p>{product.img}</p>
+          <p><img src= { ` ${product.img}`}></img></p>
       <h2>{product.name}</h2>
           <p>description:{product.description}</p>
           <p> Price: ${product.price}</p>
