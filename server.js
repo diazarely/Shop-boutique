@@ -54,11 +54,10 @@ app.get('/products/new', (req, res) => {
 
 //create route
 app.post('/products', (req, res) => {
-    //products.push(req.body);
-    // console.log('req.body', req.body);
+    
     Product.create(req.body, (err, createdProduct)=> {
         res.redirect('/products')
-        // res.send(createdFruit)
+        
     })
 });
 

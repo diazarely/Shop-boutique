@@ -9,7 +9,7 @@ class DefaultLayout extends React.Component{
         <html lang="en">
             <head>
                 <title> {this.props.title}</title>
-                <link rel ="stylesheet" href="css/styles.css"></link>
+                <link rel ="stylesheet" href="/css/styles.css"></link>
             </head>
             <body>
                 <div class= "header"> Baby Boutique

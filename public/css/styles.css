@@ -1,14 +1,60 @@
-body {
-    
-  
-}
 
 .header{
     background-color: cornflowerblue; 
-    background-image: url(https://cdn.dribbble.com/users/2272835/screenshots/7589377/stork_dribbble.gif);
+    background-image: url(https://www.pureclarity.com/wp-content/uploads/2019/04/Baby_Boutique_Header_1920x600_Centered_3.jpg);
     height: 250px; 
     width: 100%;
    text-align: center;
    font-size: 90px;
+
 }
 
+.product-info{
+    font-size: 30px;
+    left: 50px;
+}
+
+.products{
+    display: flex;
+    
+    flex-flow: row wrap;
+
+}
+
+.products li{
+    display: flex;
+    padding: 40px;
+    flex-flow: column;
+    text-align: center;
+    font-size: medium;
+    
+
+}
+
+.all-show{
+    position: absolute;
+}
+.product-info{
+    position: absolute;
+    left : 600px;
+    top: 0px;
+    
+    height: auto;
+    width: 600px;
+    padding: 20px;
+}
+
+button{
+    border-radius: 12px;
+    color: beige;
+    text: black;
+}
+.new-product{
+    font-size: 20px;
+   text-align: center;
+   color: gray;
+    border: 2px solid gray;
+    padding : 10px;
+    border-radius: 12px;
+    
+}
