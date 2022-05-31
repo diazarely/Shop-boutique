@@ -1,7 +1,7 @@
 
 .header{
     background-color: cornflowerblue; 
-    background-image: url(https://www.pureclarity.com/wp-content/uploads/2019/04/Baby_Boutique_Header_1920x600_Centered_3.jpg);
+    background-image: url('https://www.pureclarity.com/wp-content/uploads/2019/04/Baby_Boutique_Header_1920x600_Centered_3.jpg');
     height: 250px; 
     width: 100%;
    text-align: center;
@@ -27,7 +27,7 @@
     flex-flow: column;
     text-align: center;
     font-size: medium;
-    
+
 
 }
 
